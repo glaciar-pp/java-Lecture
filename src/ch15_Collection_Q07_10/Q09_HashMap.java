@@ -12,20 +12,26 @@ public class Q09_HashMap {
 		map.put("hong", 86);
 		map.put("white", 92);
 		
-		Set<String> keySet = map.keySet();
-		for (String s : keySet)
-			System.out.println(s + ": " + map.get(s));
-		System.out.println();
-		
+	
+		String name = null;	
 		int maxScore = 0;
 //		Entry<String, Integer> entry : map.entrySet()
-		
-		
-		int minScore = 0;
-		
-		String name = null;
-		
-		
-	}
 
+		int totalScore = 0;
+		
+		Set<Map.Entry<String, Integer>> entrySet = map.entrySet();
+		for(Map.Entry<String, Integer> entry : entrySet) {
+			if (entry.getValue()>maxScore) {
+				name = entry.getKey();
+				maxScore = entry.getValue();
+			}
+			totalScore += entry.getValue();
+		}
+		
+		int avgScore = totalScore / map.size();
+		System.out.println("평균 점수: " + avgScore);
+		
+		System.out.println("최고 점수: " + maxScore);
+		System.out.println("최고 점수를 받은 아이디: " + name);
+	}
 }

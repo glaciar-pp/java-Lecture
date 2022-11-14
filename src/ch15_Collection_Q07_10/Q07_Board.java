@@ -18,3 +18,4 @@ public class Q07_Board {
 	}
 
 }
+//사실상 Board가 DTO(Data Transfer Object) 역할을 하는 것

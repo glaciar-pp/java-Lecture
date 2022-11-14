@@ -13,7 +13,7 @@ public class Q08_Student {
 		this.studentNum = studentNum;
 		this.name = name;
 	}
-
+// 게터세터 필요없었음...
 	public int getStudentNum() {
 		return studentNum;
 	}

@@ -18,6 +18,6 @@ class MyArrays {
 	public static <T> void swap(T[]t, int i, int k) {
 		T tmp=t[i];
 		t[i]=t[k];
-		t[k]=t[tmp];
+		t[k]=tmp;
 	}
 }
