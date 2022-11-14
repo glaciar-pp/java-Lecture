@@ -12,7 +12,7 @@ public class Q07_Board {
 	public String getTitle() {
 		return title;
 	}
-
+ 
 	public String getContent() {
 		return content;
 	}
