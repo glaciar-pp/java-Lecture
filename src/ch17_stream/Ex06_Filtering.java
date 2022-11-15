@@ -29,7 +29,7 @@ public class Ex06_Filtering {
 		// 중복요소를 제거하고 신으로 시작하는 요소만 통과
 		list.stream()
 		.distinct()
-		.filter(s -> s.startsWith("신"))
+		.filter(s -> s.contains("java"))
 		.forEach(s -> System.out.println(s));
 		System.out.println();
 	}
