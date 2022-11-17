@@ -18,6 +18,8 @@ public class Ex01_Select {
 			        "mcuser", "mcpass");
 			stmt = conn.createStatement();
 			String sql = "SELECT * FROM city WHERE countrycode='KOR' LIMIT 10;";
+			
+			//
 			ResultSet rs = stmt.executeQuery(sql);
 			while(rs.next()) {
 				int id = rs.getInt(1); // 첫번째 컬럼, 정수형 값

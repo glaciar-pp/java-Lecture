@@ -14,21 +14,20 @@ import java.util.List;
 public class ArrayListCommonDivisor {
 
 	public static void main(String[] args) {
-		List<Integer> list = new ArrayList<>();
-
-		list.add(12);
-		list.add(24);
+		List<Integer> list = getCommonDivisors(12, 24);
+		for (int i : list)
+			System.out.println(i);
 	}
 
-	public static void getCommonDivisors(int a, int b) {
-
+	public static List<Integer> getCommonDivisors(int a, int b) {
+		List<Integer> list = new ArrayList<>();
 		int min = (a < b) ? a : b;
+		
 		for (int i = 1; i <= min; i++) {
 			if (a % i == 0 && b % i == 0)
-				System.out.println(i);
-
-			return;
-
+				list.add(i);
 		}
+		
+		return list;
 	}
 }
